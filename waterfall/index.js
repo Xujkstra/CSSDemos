@@ -26,11 +26,13 @@ var boxWidth = $(".box")[0].offsetWidth;
 var figureWidth = 197;
 var columnNumber = Math.floor(boxWidth / figureWidth);
 console.log(columnNumber)
+var columnstr = ''
 for(var i =0; i<columnNumber; i++){
-	var column = $("<div></div>").addClass('column column-'+i);
-	$(".box").append(column);
+	columnstr+="<div class='column column-"+i+"'> </div> \n"
 }
-
+columnstr+= "<div class='empty'></div>"
+$(".box").html(columnstr)
+console.log(columnstr);
 function getColumnIndex(){
 	var oColumn = $(".column");
 	var result = 0;

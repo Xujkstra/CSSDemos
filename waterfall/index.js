@@ -38,12 +38,10 @@ function getColumnIndex(){
 	var result = 0;
 	var min = oColumn[0].offsetHeight;
 	oColumn.each(function(index){
-		// console.log(this.offsetHeight)
 		if(this.offsetHeight < min){
 			min = this.offsetHeight;
 			result = index; 
 		}
 	})
-	// console.log(result)
 	return result;
 }

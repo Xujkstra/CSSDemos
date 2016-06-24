@@ -1,0 +1,20 @@
+ul {
+	list-style: none;
+}
+li {
+	float: left;
+	width: 30px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+	margin-right: 2px;
+	cursor: pointer;
+}
+.page-number.current {
+	background-color: #ff8118;
+}
+.disable {
+	background: #ddd;
+	color:#f1f1f1;
+	cursor: not-allowed;
+}

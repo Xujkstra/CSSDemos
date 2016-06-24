@@ -113,4 +113,4 @@ var pagenation = {
 	}
 }
 
-pagenation.set({total:10,column:1,container:wrap}).init();
+pagenation.set({total:10,column:1}).init();

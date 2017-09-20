@@ -1,0 +1,38 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-end;
+	align-content: space-between;
+	height: 200px;
+}
+
+.item {
+	order: 1;
+	/*min-width: 200px;*/
+	/*flex-grow: 1;*/
+	background: #f00;
+	color: #fff;
+	text-align: center;
+}
+
+.first {
+	width: 200px;
+	/*flex-grow: 0;*/
+	flex-shrink: 3;
+}
+.second {
+	order: 2;
+	/*flex-grow: 5;*/
+	background: #000;
+}
+
+.test {
+	width: 200px;
+	height: 200px;
+	background: #000;
+}

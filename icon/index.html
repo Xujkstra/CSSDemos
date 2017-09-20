@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Icon 文字对齐Demo</title>
+  </head>
+  <style>
+    .title {
+      border-bottom: 1px solid #ff0;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      border-bottom: 1px solid #f1f1f1;
+    }
+  </style>
+  <body>
+      <p class="title">title</p>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+      <script>
+        let oLi = document.querySelectorAll('li')
+        let oTitle = document.querySelector('.title')
+        console.log(oTitle)
+        oLi.forEach(function(elem,index) {
+          elem.addEventListener('mouseenter', function() {
+            if(index === 0 ) {
+              this.style.background = '#f0f'
+              this.style.borderBottom = 'none'
+              oTitle.style.borderBottom = 'none'
+              return
+            }
+            this.style.background = '#f0f'
+            this.style.borderBottom = 'none'
+            oLi[index-1].style.borderBottom = 'none'
+          })
+          elem.addEventListener('mouseleave', function() {
+            if(index === 0) {
+              this.style.background = '#fff'
+              this.style.borderBottom = '1px solid #f1f1f1'
+              oTitle.style.borderBottom = '1px solid #ff0'
+              return
+            }
+            this.style.background = '#fff'
+            elem.style.borderBottom = '1px solid #f1f1f1'
+            oLi[index-1].style.borderBottom = '1px solid #f1f1f1'
+          })
+        })
+      </script>
+  </body>
+</html>
